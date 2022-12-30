@@ -1,0 +1,90 @@
+.taskflow-node {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #D7D7D7;
+  background-color: #fff;
+  overflow: hidden;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 16px;
+    line-height: 28px;
+    color: #fff;
+    background-color: #858598;
+
+    .iconguanbi {
+      font-size: 12px;
+    }
+
+    .iconjingshi {
+      margin-right: 4px;
+    }
+  }
+
+  &__content {
+    padding: 0 16px;
+    height: 64px;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 0;
+}
+
+.form-item + .form-item {
+  margin-top: 24px;
+}
+
+.form-item {
+  display: flex;
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+    width: 93px;
+    margin-right: 6px;
+    line-height: 36px;
+
+    &-tip {
+      margin-right: 6px;
+    }
+
+    &-star {
+      color: #F67172;
+    }
+  }
+
+  .value {
+    .el-input, .el-textarea {
+      width: 480px;
+    }
+
+    ::v-deep .el-textarea {
+      height: 175px;
+
+      &__inner {
+        height: 100%!important;
+      }
+    }
+  }
+}
+
+@mixin menuExample($width) {
+  width: $width;
+    
+  img {
+    width: 100%;
+  }
+
+  &__tip {
+    margin-left: 4px;
+    font-size: 14px;
+    color: var(--main-color);
+    font-weight: normal;
+  }
+}
